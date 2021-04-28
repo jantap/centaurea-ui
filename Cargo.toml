@@ -1,0 +1,21 @@
+[package]
+name = "centaurea"
+version = "0.1.0"
+license = "MIT"
+homepage = "https://github.com/jantap/centaurea-ui"
+repository = "https://github.com/jantap/centaurea-ui"
+description = "helper library for creating terminal user interfaces with crossterm"
+readme = "README.md"
+categories = ["command-line-interface"]
+keywords = ["library", "buffer", "crossterm", "tui"]
+authors = ["Jan Wojcicki <jantap413@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossterm = "0.19.0"
+
+# error handling
+thiserror = "1.0.20"
+anyhow = "1.0.38"
