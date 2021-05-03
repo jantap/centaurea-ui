@@ -16,7 +16,7 @@ impl<'a, S: Style> Canvas<'a, S> {
 
 impl<'a, S: Style> Drawable<S> for Canvas<'a, S> {
 	fn fill(&mut self, text: char, style: S) {
-        self.rect(self.frame, text, style);
+        self.buffer.rect(self.frame, text, style);
     }
 
 	fn rect(&mut self, rect: Rect, text: char, style: S) {
