@@ -6,6 +6,4 @@ pub enum BufUiError {
 	TerminalTooSmall,
 	#[error("crossterm terminal error")]
 	TerminalError(#[from] crossterm::ErrorKind),
-	#[error("terminal io error")]
-	IoError(#[from] std::io::Error),
 }

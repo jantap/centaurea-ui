@@ -20,10 +20,7 @@ impl<'a, S: Style> Drawable<S> for Canvas<'a, S> {
     }
 
 	fn rect(&mut self, rect: Rect, text: char, style: S) {
-		let text: String = (0..rect.width).map(|_| text).collect();
-		for y in 0..rect.height {
-			self.buffer.string(self.frame.x + rect.x, self.frame.y + rect.y + y, text.clone(), style);
-		}
+        self.buffer.rect(Rect::new(rect.x + self.frame.x, rect.y + self.frame.y, rect.width, rect.height), text, style);
 	}
 
 	fn string(&mut self, x: u16, y: u16, text: String, style: S) {
